@@ -1,0 +1,17 @@
+
+server:
+  port: 8083
+
+
+spring:
+  spring:
+    application:
+      name:yizhi_teaching_competition
+    #Mybatios-Spirng
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url:  jdbc:mysql://localhost:3306/yizhi_test?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+
+

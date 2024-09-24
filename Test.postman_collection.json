@@ -1,0 +1,2432 @@
+{
+	"info": {
+		"_postman_id": "0f2637bc-065b-441c-83b3-645434cd7a38",
+		"name": "YiZhiTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30805641"
+	},
+	"item": [
+		{
+			"name": "User_用户",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login_admin_超级管理员",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=BD7F2D2FB5ACEF476912127076309D13; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:13:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"currentUser\": {\n        \"id\": 1,\n        \"name\": \"一号管理员\",\n        \"account\": \"admin\",\n        \"school\": \"清北大学\",\n        \"password\": \"123456\",\n        \"createTime\": \"2024-03-29T21:59:03\",\n        \"createUser\": 1,\n        \"updateTime\": \"2024-03-29T21:59:09\",\n        \"updateUser\": 1,\n        \"roleid\": 1,\n        \"roleName\": \"教育局管理员\",\n        \"roledetail\": \"拥有最最最牛逼的权利\"\n    },\n    \"code\": 0\n}"
+						},
+						{
+							"name": "Login_zs123_评委",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "zs123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:21:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"currentUser\": {\n        \"id\": 5,\n        \"name\": \"张三\",\n        \"account\": \"zs123\",\n        \"school\": \"中北大学\",\n        \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n        \"createTime\": null,\n        \"createUser\": null,\n        \"updateTime\": null,\n        \"updateUser\": null,\n        \"roleid\": 2,\n        \"roleName\": \"评委\",\n        \"roledetail\": \"评审专家，求求多给几分吧\"\n    },\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "zs123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login_admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=BD7F2D2FB5ACEF476912127076309D13; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:13:10 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"currentUser\": {\n        \"id\": 1,\n        \"name\": \"一号管理员\",\n        \"account\": \"admin\",\n        \"school\": \"清北大学\",\n        \"password\": \"123456\",\n        \"createTime\": \"2024-03-29T21:59:03\",\n        \"createUser\": 1,\n        \"updateTime\": \"2024-03-29T21:59:09\",\n        \"updateUser\": 1,\n        \"roleid\": 1,\n        \"roleName\": \"教育局管理员\",\n        \"roledetail\": \"拥有最最最牛逼的权利\"\n    },\n    \"code\": 0\n}"
+						},
+						{
+							"name": "Login_zs123",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "zs123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:21:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"currentUser\": {\n        \"id\": 5,\n        \"name\": \"张三\",\n        \"account\": \"zs123\",\n        \"school\": \"中北大学\",\n        \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n        \"createTime\": null,\n        \"createUser\": null,\n        \"updateTime\": null,\n        \"updateUser\": null,\n        \"roleid\": 2,\n        \"roleName\": \"评委\",\n        \"roledetail\": \"评审专家，求求多给几分吧\"\n    },\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "zs123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "张三",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "中北大学",
+									"type": "text"
+								},
+								{
+									"key": "roleid",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register_zs123",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "zs123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "张三",
+											"type": "text"
+										},
+										{
+											"key": "school",
+											"value": "中北大学",
+											"type": "text"
+										},
+										{
+											"key": "roleid",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:23:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Add_新增用户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "ww123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "王五",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "中北大学",
+									"type": "text"
+								},
+								{
+									"key": "roleid",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "groupid",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"add"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register_zs123",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "zs123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "张三",
+											"type": "text"
+										},
+										{
+											"key": "school",
+											"value": "中北大学",
+											"type": "text"
+										},
+										{
+											"key": "roleid",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:23:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update_更新用户",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "30",
+									"description": "王五的id",
+									"type": "text"
+								},
+								{
+									"key": "account",
+									"value": "ww123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111111",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "张物流",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "中东大学",
+									"type": "text"
+								},
+								{
+									"key": "roleid",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register_zs123",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "zs123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "张三",
+											"type": "text"
+										},
+										{
+											"key": "school",
+											"value": "中北大学",
+											"type": "text"
+										},
+										{
+											"key": "roleid",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:23:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete_删除用户",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "account",
+									"value": "zs123",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "张三",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "中北大学",
+									"type": "text"
+								},
+								{
+									"key": "roleid",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/delete?id=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register_zs123",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account",
+											"value": "zs123",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "张三",
+											"type": "text"
+										},
+										{
+											"key": "school",
+											"value": "中北大学",
+											"type": "text"
+										},
+										{
+											"key": "roleid",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 07:23:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Page_分页查询用户",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/page?pageSize=10&page=1&school=中北大学",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "groupid",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "school",
+									"value": "中北大学"
+								},
+								{
+									"key": "roleid",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Page_test1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/page?pageSize=10&page=1&school=中北大学&roleid=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"page"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "groupid",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "school",
+											"value": "中北大学"
+										},
+										{
+											"key": "roleid",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 09:08:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"分页查询成功！\",\n    \"pageUser\": {\n        \"records\": [\n            {\n                \"id\": 7,\n                \"name\": \"张三\",\n                \"account\": \"zs123\",\n                \"school\": \"中北大学\",\n                \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n                \"createTime\": \"2024-03-30T15:24:39\",\n                \"createUser\": null,\n                \"updateTime\": \"2024-03-30T15:24:39\",\n                \"updateUser\": null,\n                \"roleid\": 2,\n                \"groupid\": 0,\n                \"roleName\": \"评委\",\n                \"roledetail\": \"评审专家，求求多给几分吧\",\n                \"groupname\": null\n            },\n            {\n                \"id\": 8,\n                \"name\": \"李四\",\n                \"account\": \"ls123\",\n                \"school\": \"中北大学\",\n                \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n                \"createTime\": \"2024-03-30T16:19:50\",\n                \"createUser\": 1,\n                \"updateTime\": \"2024-03-30T16:19:56\",\n                \"updateUser\": 1,\n                \"roleid\": 3,\n                \"groupid\": 2,\n                \"roleName\": \"教师\",\n                \"roledetail\": \"参赛选手\",\n                \"groupname\": \"共基础课程组（不含思政）\"\n            }\n        ],\n        \"total\": 2,\n        \"size\": 10,\n        \"current\": 1,\n        \"orders\": [],\n        \"optimizeCountSql\": true,\n        \"hitCount\": false,\n        \"countId\": null,\n        \"maxLimit\": null,\n        \"searchCount\": true,\n        \"pages\": 1\n    },\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Export_导出用户信息为表格",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/export",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"export"
+							],
+							"query": [
+								{
+									"key": "groupid",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "school",
+									"value": "中北大学",
+									"disabled": true
+								},
+								{
+									"key": "roleid",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Page_test1",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/page?pageSize=10&page=1&school=中北大学&roleid=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"page"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "groupid",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "school",
+											"value": "中北大学"
+										},
+										{
+											"key": "roleid",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 30 Mar 2024 09:08:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"分页查询成功！\",\n    \"pageUser\": {\n        \"records\": [\n            {\n                \"id\": 7,\n                \"name\": \"张三\",\n                \"account\": \"zs123\",\n                \"school\": \"中北大学\",\n                \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n                \"createTime\": \"2024-03-30T15:24:39\",\n                \"createUser\": null,\n                \"updateTime\": \"2024-03-30T15:24:39\",\n                \"updateUser\": null,\n                \"roleid\": 2,\n                \"groupid\": 0,\n                \"roleName\": \"评委\",\n                \"roledetail\": \"评审专家，求求多给几分吧\",\n                \"groupname\": null\n            },\n            {\n                \"id\": 8,\n                \"name\": \"李四\",\n                \"account\": \"ls123\",\n                \"school\": \"中北大学\",\n                \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n                \"createTime\": \"2024-03-30T16:19:50\",\n                \"createUser\": 1,\n                \"updateTime\": \"2024-03-30T16:19:56\",\n                \"updateUser\": 1,\n                \"roleid\": 3,\n                \"groupid\": 2,\n                \"roleName\": \"教师\",\n                \"roledetail\": \"参赛选手\",\n                \"groupname\": \"共基础课程组（不含思政）\"\n            }\n        ],\n        \"total\": 2,\n        \"size\": 10,\n        \"current\": 1,\n        \"orders\": [],\n        \"optimizeCountSql\": true,\n        \"hitCount\": false,\n        \"countId\": null,\n        \"maxLimit\": null,\n        \"searchCount\": true,\n        \"pages\": 1\n    },\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Import_导入用户表格信息",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/53595/Desktop/依智实践项目/提交任务/用户导入测试表格.xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/user/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"import"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Import",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/53595/Desktop/依智实践项目/提交任务/用户导入测试表格.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/user/import",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"import"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 03:23:05 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"请先登录！\",\n    \"code\": 500\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_获取用户详情",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/user/get?id=8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"user",
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getUser",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/user/get?id=8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"user",
+										"get"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 03:07:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0,\n    \"user\": {\n        \"id\": 8,\n        \"name\": \"李四\",\n        \"account\": \"ls123\",\n        \"school\": \"中北大学\",\n        \"password\": \"e10adc3949ba59abbe56e057f20f883e\",\n        \"createTime\": \"2024-03-30T16:19:50\",\n        \"createUser\": 1,\n        \"updateTime\": \"2024-03-30T16:19:56\",\n        \"updateUser\": 1,\n        \"roleid\": 3,\n        \"groupid\": 2\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Group_组别",
+			"item": [
+				{
+					"name": "List_获取到所有组别信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/group/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"group",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role_用户类型",
+			"item": [
+				{
+					"name": "List_获取到所有用户类型信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/role/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"role",
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "File_文件上传下载",
+			"item": [
+				{
+					"name": "upload_上传",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/file/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"file",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download_下载",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/file/download?filenName=c2eb3ca7-9abd-4abf-838d-fb54ab4dd80e+测试文件.doc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"file",
+								"download"
+							],
+							"query": [
+								{
+									"key": "filenName",
+									"value": "c2eb3ca7-9abd-4abf-838d-fb54ab4dd80e+测试文件.doc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Work_参赛信息",
+			"item": [
+				{
+					"name": "Page_分页查询参赛信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/work/page?pageSize=10&page=1&workName=英语&teamUsername=王五",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"work",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "school",
+									"value": "中东大学",
+									"disabled": true
+								},
+								{
+									"key": "workName",
+									"value": "英语"
+								},
+								{
+									"key": "teamUsername",
+									"value": "王五"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/work/page?pageSize=10&page=1&workName=英语&teamUsername=王五",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"work",
+										"page"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "school",
+											"value": "中东大学",
+											"disabled": true
+										},
+										{
+											"key": "workName",
+											"value": "英语"
+										},
+										{
+											"key": "teamUsername",
+											"value": "王五"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 12:29:24 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"分页查询成功\",\n    \"workDTOPage\": {\n        \"records\": [\n            {\n                \"id\": 2,\n                \"workName\": \"英语人才培养计划\",\n                \"school\": \"中东大学\",\n                \"teamUsername\": \"李四，王五\",\n                \"groupid\": 2,\n                \"contactInfo\": \"13213213234\",\n                \"aveScore\": 95,\n                \"entryForm\": \"180bfef2-05a1-4872-ae5a-8ed79b1eb563_测试文件.doc\",\n                \"infoForm\": \"180bfef2-05a1-4872-ae5a-8ed79b1eb563_测试文件.doc\",\n                \"createTime\": \"2024-03-31T20:26:25\",\n                \"updateTime\": \"2024-03-31T20:26:33\",\n                \"createUser\": 5,\n                \"updateUser\": 1,\n                \"videaFileName\": null,\n                \"teachplanFileName\": null,\n                \"newsFileName\": null,\n                \"cetFileName\": null,\n                \"standardFileName\": null,\n                \"textbookFileName\": null,\n                \"filePath\": null,\n                \"groupName\": \"公共基础课程组\"\n            }\n        ],\n        \"total\": 1,\n        \"size\": 10,\n        \"current\": 1,\n        \"orders\": [],\n        \"optimizeCountSql\": true,\n        \"hitCount\": false,\n        \"countId\": null,\n        \"maxLimit\": null,\n        \"searchCount\": true,\n        \"pages\": 1\n    },\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get_获取单个参赛详细信息",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Export_参赛信息导出为表格",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/work/export",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"work",
+								"export"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit_选手提交参赛信息和文件名",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "workName",
+									"value": "物理人才培养计划",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "中西大学",
+									"type": "text"
+								},
+								{
+									"key": "teamUsername",
+									"value": "牛二",
+									"type": "text"
+								},
+								{
+									"key": "groupid",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "contactInfo",
+									"value": "16453645364",
+									"type": "text"
+								},
+								{
+									"key": "entryForm",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "infoForm",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "videaFileNames",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+									"type": "text"
+								},
+								{
+									"key": "videaFileNames",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+									"type": "text"
+								},
+								{
+									"key": "videaFileNames",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+									"type": "text"
+								},
+								{
+									"key": "teachplanFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "newsFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "cetFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "standardFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "textbookFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/work/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"work",
+								"submit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "submit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "workName",
+											"value": "物理人才培养计划",
+											"type": "text"
+										},
+										{
+											"key": "school",
+											"value": "中西大学",
+											"type": "text"
+										},
+										{
+											"key": "teamUsername",
+											"value": "牛二",
+											"type": "text"
+										},
+										{
+											"key": "groupid",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "contactInfo",
+											"value": "16453645364",
+											"type": "text"
+										},
+										{
+											"key": "entryForm",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "infoForm",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "videaFileNames",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+											"type": "text"
+										},
+										{
+											"key": "videaFileNames",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+											"type": "text"
+										},
+										{
+											"key": "videaFileNames",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+											"type": "text"
+										},
+										{
+											"key": "teachplanFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "newsFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "cetFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "standardFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "textbookFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/work/submit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"work",
+										"submit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:59:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"提交成功!\",\n    \"code\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update_更新参赛信息",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "workName",
+									"value": "物理人才培养计划",
+									"type": "text"
+								},
+								{
+									"key": "school",
+									"value": "中西大学",
+									"type": "text"
+								},
+								{
+									"key": "teamUsername",
+									"value": "牛二",
+									"type": "text"
+								},
+								{
+									"key": "groupid",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "contactInfo",
+									"value": "16453645364",
+									"type": "text"
+								},
+								{
+									"key": "entryForm",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "infoForm",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "videaFileNames",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+									"type": "text"
+								},
+								{
+									"key": "videaFileNames",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+									"type": "text"
+								},
+								{
+									"key": "videaFileNames",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+									"type": "text"
+								},
+								{
+									"key": "teachplanFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "newsFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "cetFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "standardFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								},
+								{
+									"key": "textbookFileName",
+									"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/work/submit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"work",
+								"submit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "submit",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "workName",
+											"value": "物理人才培养计划",
+											"type": "text"
+										},
+										{
+											"key": "school",
+											"value": "中西大学",
+											"type": "text"
+										},
+										{
+											"key": "teamUsername",
+											"value": "牛二",
+											"type": "text"
+										},
+										{
+											"key": "groupid",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "contactInfo",
+											"value": "16453645364",
+											"type": "text"
+										},
+										{
+											"key": "entryForm",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "infoForm",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "videaFileNames",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+											"type": "text"
+										},
+										{
+											"key": "videaFileNames",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+											"type": "text"
+										},
+										{
+											"key": "videaFileNames",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.mp4",
+											"type": "text"
+										},
+										{
+											"key": "teachplanFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "newsFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "cetFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "standardFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										},
+										{
+											"key": "textbookFileName",
+											"value": "404423b0-4eb4-44a9-89e1-2b97b4d4c739_测试文件.pdf",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/work/submit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"work",
+										"submit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 31 Mar 2024 13:59:47 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"提交成功!\",\n    \"code\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Review_参赛打分评价",
+			"item": [
+				{
+					"name": "Page_分页查询评价信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/review/page?pageSize=10&page=1&reviewerName=1&groupid=2&teamUsername=张",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"review",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "reviewerName",
+									"value": "1"
+								},
+								{
+									"key": "workName",
+									"value": "数学人才培养计划",
+									"disabled": true
+								},
+								{
+									"key": "groupid",
+									"value": "2"
+								},
+								{
+									"key": "schoolName",
+									"value": "中北大学",
+									"disabled": true
+								},
+								{
+									"key": "teamUsername",
+									"value": "张"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/review/page?pageSize=10&page=1&reviewerName=1&groupid=2&teamUsername=张",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"review",
+										"page"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "reviewerName",
+											"value": "1"
+										},
+										{
+											"key": "workName",
+											"value": "数学人才培养计划",
+											"disabled": true
+										},
+										{
+											"key": "groupid",
+											"value": "2"
+										},
+										{
+											"key": "schoolName",
+											"value": "中北大学",
+											"disabled": true
+										},
+										{
+											"key": "teamUsername",
+											"value": "张"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 08:13:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0,\n    \"pagedata\": [\n        {\n            \"id\": 1,\n            \"workid\": \"1\",\n            \"reviewDetile\": \"这个作品很好\",\n            \"score1\": 20,\n            \"score2\": 20,\n            \"score3\": 40,\n            \"score4\": 8,\n            \"score5\": 8,\n            \"score6\": 4,\n            \"totalScore\": 100,\n            \"createUser\": \"2\",\n            \"createDatetime\": \"2024-04-01T15:13:59\"\n        },\n        {\n            \"id\": 2,\n            \"workid\": \"2\",\n            \"reviewDetile\": \"这个作品更好\",\n            \"score1\": 20,\n            \"score2\": 20,\n            \"score3\": 40,\n            \"score4\": 8,\n            \"score5\": 8,\n            \"score6\": 4,\n            \"totalScore\": 100,\n            \"createUser\": \"2\",\n            \"createDatetime\": \"2024-04-01T15:14:49\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Export_导出评价信息为表格",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/review/export?pageSize=10&page=1&reviewerName=1&groupid=2&teamUsername=张",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"review",
+								"export"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "reviewerName",
+									"value": "1"
+								},
+								{
+									"key": "workName",
+									"value": "数学人才培养计划",
+									"disabled": true
+								},
+								{
+									"key": "groupid",
+									"value": "2"
+								},
+								{
+									"key": "schoolName",
+									"value": "中北大学",
+									"disabled": true
+								},
+								{
+									"key": "teamUsername",
+									"value": "张"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/review/page?pageSize=10&page=1&reviewerName=1&groupid=2&teamUsername=张",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"review",
+										"page"
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "10"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "reviewerName",
+											"value": "1"
+										},
+										{
+											"key": "workName",
+											"value": "数学人才培养计划",
+											"disabled": true
+										},
+										{
+											"key": "groupid",
+											"value": "2"
+										},
+										{
+											"key": "schoolName",
+											"value": "中北大学",
+											"disabled": true
+										},
+										{
+											"key": "teamUsername",
+											"value": "张"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 08:13:43 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"操作成功\",\n    \"code\": 0,\n    \"pagedata\": [\n        {\n            \"id\": 1,\n            \"workid\": \"1\",\n            \"reviewDetile\": \"这个作品很好\",\n            \"score1\": 20,\n            \"score2\": 20,\n            \"score3\": 40,\n            \"score4\": 8,\n            \"score5\": 8,\n            \"score6\": 4,\n            \"totalScore\": 100,\n            \"createUser\": \"2\",\n            \"createDatetime\": \"2024-04-01T15:13:59\"\n        },\n        {\n            \"id\": 2,\n            \"workid\": \"2\",\n            \"reviewDetile\": \"这个作品更好\",\n            \"score1\": 20,\n            \"score2\": 20,\n            \"score3\": 40,\n            \"score4\": 8,\n            \"score5\": 8,\n            \"score6\": 4,\n            \"totalScore\": 100,\n            \"createUser\": \"2\",\n            \"createDatetime\": \"2024-04-01T15:14:49\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Score_评委打分",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "workid",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "reviewDetile",
+									"value": "这个作品太强了，强的可怕",
+									"type": "text"
+								},
+								{
+									"key": "score1",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "score2",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "score3",
+									"value": "40",
+									"type": "text"
+								},
+								{
+									"key": "score4",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "score5",
+									"value": "8",
+									"type": "text"
+								},
+								{
+									"key": "score6",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "totalScore",
+									"value": "99",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8083/review/score",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"review",
+								"score"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Score",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "workid",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "reviewDetile",
+											"value": "这个作品太强了，强的可怕",
+											"type": "text"
+										},
+										{
+											"key": "score1",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "score2",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "score3",
+											"value": "40",
+											"type": "text"
+										},
+										{
+											"key": "score4",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "score5",
+											"value": "8",
+											"type": "text"
+										},
+										{
+											"key": "score6",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "totalScore",
+											"value": "99",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8083/review/score",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"review",
+										"score"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 09:22:16 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"评价成功\",\n    \"code\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
